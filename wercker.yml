@@ -14,6 +14,7 @@ build:
         code: mvn clean assembly:assembl       
         
 #Push the docker image with our built and tested application to Docker Hub
+
 push-release:
   steps:
     - internal/docker-push:
