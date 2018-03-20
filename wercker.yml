@@ -11,10 +11,10 @@ build:
         packages: maven
     - script:
         name: maven build
-        code: mvn clean assembly:assembl
-       
- #Push the docker image with our built and tested application to Docker Hub
- push-release:
+        code: mvn clean assembly:assembl       
+        
+#Push the docker image with our built and tested application to Docker Hub
+push-release:
   steps:
     - internal/docker-push:
         username: $DOCKER_USERNAME
